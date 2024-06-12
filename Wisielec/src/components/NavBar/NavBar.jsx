@@ -7,9 +7,7 @@ export default function NavBar() {
     <nav>
       <li>
         <NavLink to="/Game">
-          <button className="GameButton">
-            <a>Start the game!</a>
-          </button>
+          <button className="GameButton">Start the game!</button>
         </NavLink>
       </li>
       <li>
