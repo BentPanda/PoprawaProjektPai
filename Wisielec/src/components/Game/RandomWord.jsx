@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import wordsData from "../json/words.json";
 
 const RandomWord = ({ setWord, setGameStarted }) => {
@@ -13,6 +14,11 @@ const RandomWord = ({ setWord, setGameStarted }) => {
   }, [setWord, setGameStarted]);
 
   return <></>;
+};
+
+RandomWord.propTypes = {
+  setWord: PropTypes.func.isRequired,
+  setGameStarted: PropTypes.func.isRequired,
 };
 
 export default RandomWord;

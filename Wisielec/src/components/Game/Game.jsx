@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import RandomWord from "./RandomWord";
 import "./Game.scss";
@@ -66,7 +66,7 @@ const Game = () => {
           <img src={images[mistakes]} alt={`Mistake ${mistakes}`} />
           <div className="word">{renderWord()}</div>
           <div className="keyboard">{renderKeyboard()}</div>
-          <div className="mistakes">Błędy: {mistakes}</div>
+          <div className="mistakes">Błendy: {mistakes}</div>
           <button className="homeButton" onClick={() => navigate("/")}>
             Powrót do Mainpage'a
           </button>
