@@ -12,12 +12,12 @@ export default function NavBar() {
       </li>
       <li>
         <NavLink to="/AboutAuthor">
-          <a className="normalLink">About Author</a>
+          <span className="normalLink">About Author</span>
         </NavLink>
       </li>
       <li>
         <NavLink to="/">
-          <a>Home</a>
+          <span>Home</span>
         </NavLink>
       </li>
     </nav>
