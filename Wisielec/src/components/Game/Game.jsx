@@ -63,7 +63,7 @@ const Game = () => {
         <RandomWord setWord={setWord} setGameStarted={setGameStarted} />
       ) : (
         <>
-          <img src={images[mistakes]} alt={`Mistake ${mistakes}`} />
+          <img src={images[mistakes]} />
           <div className="word">{renderWord()}</div>
           <div className="keyboard">{renderKeyboard()}</div>
           <div className="mistakes">Błendy: {mistakes}</div>
