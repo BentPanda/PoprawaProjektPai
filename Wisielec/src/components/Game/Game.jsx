@@ -26,14 +26,14 @@ const images = [
 
 const Game = () => {
   const [word, setWord] = useState("");
-  const [guessedLetters, setGuessedLetters] = useState([]);
+  const [shotLetters, setShotLetters] = useState([]);
   const [mistakes, setMistakes] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
   const navigate = useNavigate();
 
   const handleGuess = (letter) => {
-    if (!guessedLetters.includes(letter) && mistakes < 8) {
-      setGuessedLetters([...guessedLetters, letter]);
+    if (!shotLetters.includes(letter) && mistakes < 8) {
+      setShotLetters([...shotLetters, letter]);
       if (!word.includes(letter)) setMistakes(mistakes + 1);
     }
   };
@@ -41,7 +41,7 @@ const Game = () => {
   const renderWord = () =>
     word.split("").map((letter, i) => (
       <span key={i} className="letter">
-        {guessedLetters.includes(letter) ? letter : "_"}
+        {shotLetters.includes(letter) ? letter : "_"}
       </span>
     ));
 
@@ -50,7 +50,7 @@ const Game = () => {
       <button
         key={letter}
         onClick={() => handleGuess(letter)}
-        disabled={guessedLetters.includes(letter)}
+        disabled={shotLetters.includes(letter)}
       >
         {letter}
       </button>
